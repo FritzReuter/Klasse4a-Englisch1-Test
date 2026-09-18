@@ -196,6 +196,39 @@
 
   /* Tabellenansicht auf kleinen Displays */
 @media (max-width: 700px) {
+.bottom-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin: 2em auto 0;
+}
+
+.bottom-actions .view-toggle-wrap {
+  margin: 0;
+}
+
+.share-btn {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  padding: 0;
+  margin: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #607d8b;
+  color: white;
+}
+
+.share-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Untere Navigation auf kleinen Displays */
+@media (max-width: 700px) {
   #bottomActions {
     display: flex;
     justify-content: center;
@@ -230,57 +263,26 @@
   }
 }
 
-  .bottom-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    margin: 2em auto 0;
-  }
+.qr-view {
+  display: none;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .bottom-actions .view-toggle-wrap {
-    margin: 0;
-  }
+.qr-form-button {
+  order: 1;
+}
 
-  .share-btn {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    padding: 0;
-    margin: 0.5em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #607d8b;
-    color: white;
-  }
+#qrCode {
+  order: 2;
+}
 
-  .share-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-  }
-
-  .qr-view {
-    display: none;
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .qr-form-button {
-    order: 1;
-  }
-
-  #qrCode {
-    order: 2;
-  }
-
-  .qr-url {
-    order: 3;
-  }
+.qr-url {
+  order: 3;
+}
 
   @media (min-width: 701px) {
     #qrCode {
