@@ -477,20 +477,32 @@
       min-width: 190px;
     }
 
-    @media (max-width: 700px) {
-      .top-toggle,
-      .settings-nav,
-      .qr-nav {
-        gap: 0.25em;
-      }
+@media (max-width: 700px) {
+  .bottom-actions,
+  .top-toggle,
+  .settings-nav,
+  .qr-nav {
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
 
-      .top-toggle .view-toggle-btn,
-      .settings-nav .view-toggle-btn,
-      .qr-nav .view-toggle-btn {
-        min-width: 0;
-        flex: 1 1 auto;
-      }
-    }
+  .bottom-actions .view-toggle-btn,
+  .top-toggle .view-toggle-btn,
+  .settings-nav .view-toggle-btn,
+  .qr-nav .view-toggle-btn {
+    min-width: 0;
+    width: 190px;
+    flex: 0 1 190px;
+    margin: 0;
+  }
+
+  .settings-btn,
+  .share-btn {
+    flex: 0 0 46px;
+    margin: 0;
+  }
+}
   </style>
 </head>
 
