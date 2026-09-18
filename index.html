@@ -195,40 +195,40 @@
   }
 
   /* Tabellenansicht auf kleinen Displays */
-  @media (max-width: 700px) {
-    body {
-      padding: 1em;
-    }
-
-    .table-view {
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .overview-table {
-      width: 100%;
-      table-layout: fixed;
-    }
-
-    .overview-table .topic-name {
-      width: 28%;
-    }
-
-    .overview-table .language-head {
-      width: 36%;
-    }
-
-    .overview-table .empty-topic-cell {
-      width: 28%;
-    }
-
-    .overview-table th,
-    .overview-table td {
-      padding: 0.55em 0.4em;
-      overflow-wrap: anywhere;
-    }
+@media (max-width: 700px) {
+  #bottomActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 2em auto 0;
   }
+
+  #bottomActions .view-toggle-wrap {
+    flex: none;
+    margin: 0;
+  }
+
+  #bottomActions .settings-btn,
+  #bottomActions .view-toggle-btn,
+  #bottomActions .share-btn {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    padding: 0;
+    margin: 0;
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #bottomActions .view-toggle-btn svg {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+  }
+}
 
   .bottom-actions {
     display: flex;
@@ -746,13 +746,17 @@
 
     <div class="view-toggle-wrap">
 
-      <button
-        class="view-toggle-btn"
-        id="viewToggleButton"
-        onclick="toggleView()"
-      >
-        Tabelle anzeigen
-      </button>
+    <button
+      class="view-toggle-btn"
+      id="viewToggleButton"
+      onclick="toggleView()"
+      aria-label="Tabelle anzeigen"
+      title="Tabelle anzeigen"
+    >
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 5h2v2H4V5zm4 0h12v2H8V5zM4 11h2v2H4v-2zm4 0h12v2H8v-2zM4 17h2v2H4v-2zm4 0h12v2H8v-2z"/>
+  </svg>
+</button>
 
     </div>
 
