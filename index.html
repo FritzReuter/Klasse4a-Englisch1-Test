@@ -122,6 +122,11 @@
     cursor: pointer;
   }
 
+
+  /* ============================================================
+     Tabellenansicht
+     ============================================================ */
+
   .table-view {
     display: none;
     max-width: 1100px;
@@ -172,6 +177,11 @@
     width: 24%;
   }
 
+
+  /* ============================================================
+     Allgemeine Navigation
+     ============================================================ */
+
   .view-toggle-wrap {
     text-align: center;
     margin: 2em auto 0;
@@ -180,7 +190,6 @@
   .view-toggle-btn {
     background-color: #607d8b;
     color: white;
-    min-width: 190px;
   }
 
   .speak-hint {
@@ -189,47 +198,7 @@
     color: #555;
   }
 
-  .top-toggle {
-    margin: 0 auto 2em;
-    text-align: center;
-  }
-
-  /* Tabellenansicht auf kleinen Displays */
-@media (max-width: 700px) {
-.bottom-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-  margin: 2em auto 0;
-}
-
-.bottom-actions .view-toggle-wrap {
-  margin: 0;
-}
-
-.share-btn {
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  padding: 0;
-  margin: 0.5em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #607d8b;
-  color: white;
-}
-
-.share-btn svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-/* Untere Navigation auf kleinen Displays */
-@media (max-width: 700px) {
-  #bottomActions {
+  .bottom-actions {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,66 +206,146 @@
     margin: 2em auto 0;
   }
 
-  #bottomActions .view-toggle-wrap {
-    flex: none;
+  .bottom-actions .view-toggle-wrap {
     margin: 0;
   }
 
-  #bottomActions .settings-btn,
-  #bottomActions .view-toggle-btn,
-  #bottomActions .share-btn {
+
+  /* ============================================================
+     Einstellungen-Button
+     ============================================================ */
+
+  .settings-btn {
     width: 46px;
-    min-width: 46px;
     height: 46px;
+    min-width: 46px;
     padding: 0;
     margin: 0;
-    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #607d8b;
+    color: white;
+    flex: 0 0 46px;
+  }
+
+  .settings-btn svg {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+  }
+
+
+  /* ============================================================
+     Teilen-Button
+     ============================================================ */
+
+  .share-btn {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #607d8b;
+    color: white;
+    flex: 0 0 46px;
+  }
+
+  .share-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+
+  /* ============================================================
+     Listen-Button / Home-Button
+     ============================================================ */
+
+  #bottomActions .view-toggle-wrap {
+    width: 46px;
+    flex: 0 0 46px;
+  }
+
+  #bottomActions .view-toggle-btn,
+  .top-toggle .view-toggle-btn,
+  .settings-nav .view-toggle-btn,
+  .qr-nav .view-toggle-btn,
+  .home-btn {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 46px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
-  #bottomActions .view-toggle-btn svg {
+  #bottomActions .view-toggle-btn svg,
+  .top-toggle .view-toggle-btn svg,
+  .settings-nav .view-toggle-btn svg,
+  .qr-nav .view-toggle-btn svg,
+  .home-btn svg {
     width: 25px;
     height: 25px;
     fill: currentColor;
   }
-}
 
-.qr-view {
-  display: none;
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
 
-.qr-form-button {
-  order: 1;
-}
+  /* ============================================================
+     Navigation Tabelle / Einstellungen / QR
+     ============================================================ */
 
-#qrCode {
-  order: 2;
-}
+  .top-toggle,
+  .settings-nav,
+  .qr-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
 
-.qr-url {
-  order: 3;
-}
+  .top-toggle {
+    margin: 0 auto 2em;
+  }
 
-  @media (min-width: 701px) {
-    #qrCode {
-      order: 1;
-    }
+  .settings-nav {
+    margin: 0 auto 1.5em;
+  }
 
-    .qr-form-button {
-      order: 2;
-      margin-top: 1.5em;
-    }
+  .qr-nav {
+    margin: 1.5em auto 0;
+  }
 
-    .qr-url {
-      order: 3;
-    }
+
+  /* ============================================================
+     QR-Code
+     ============================================================ */
+
+  .qr-view {
+    display: none;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qr-form-button {
+    order: 1;
+  }
+
+  #qrCode {
+    order: 2;
+  }
+
+  .qr-url {
+    order: 3;
   }
 
   #qrCode {
@@ -319,24 +368,25 @@
     font-size: 0.9em;
   }
 
-  .settings-btn {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    padding: 0;
-    margin: 0.5em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #607d8b;
-    color: white;
+  @media (min-width: 701px) {
+    #qrCode {
+      order: 1;
+    }
+
+    .qr-form-button {
+      order: 2;
+      margin-top: 1.5em;
+    }
+
+    .qr-url {
+      order: 3;
+    }
   }
 
-  .settings-btn svg {
-    width: 25px;
-    height: 25px;
-    fill: currentColor;
-  }
+
+  /* ============================================================
+     Einstellungen
+     ============================================================ */
 
   .settings-view {
     display: none;
@@ -415,6 +465,11 @@
     transform: translateX(26px);
   }
 
+
+  /* ============================================================
+     Dark Mode
+     ============================================================ */
+
   body.dark-mode {
     background: #0b3039;
     color: #e8e8e8;
@@ -451,83 +506,90 @@
     border-top-color: #17191a;
   }
 
-  /* Einheitliche Navigation in Tabelle, Einstellungen und QR-Ansicht */
 
-  .top-toggle,
-  .settings-nav,
-  .qr-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-  }
-
-  .top-toggle {
-    margin: 0 auto 2em;
-  }
-
-  .settings-nav {
-    margin: 0 auto 1.5em;
-  }
-
-  .qr-nav {
-    margin: 1.5em auto 0;
-  }
-
-  .top-toggle .view-toggle-btn,
-  .settings-nav .view-toggle-btn,
-  .qr-nav .view-toggle-btn {
-    min-width: 190px;
-  }
+  /* ============================================================
+     Kleine Displays / Handys
+     ============================================================ */
 
   @media (max-width: 700px) {
+    body {
+      padding: 1em;
+    }
+
+    .table-view {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .overview-table {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .overview-table .topic-name {
+      width: 28%;
+    }
+
+    .overview-table .language-head {
+      width: 36%;
+    }
+
+    .overview-table .empty-topic-cell {
+      width: 28%;
+    }
+
+    .overview-table th,
+    .overview-table td {
+      padding: 0.55em 0.4em;
+      overflow-wrap: anywhere;
+    }
+
+    #bottomActions,
     .top-toggle,
     .settings-nav,
     .qr-nav {
-      gap: 0.25em;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
     }
 
+    #bottomActions {
+      width: fit-content;
+      max-width: 100%;
+      margin: 2em auto 0;
+    }
+
+    #bottomActions .view-toggle-wrap {
+      width: 46px;
+      flex: 0 0 46px;
+      margin: 0;
+    }
+
+    #bottomActions .settings-btn,
+    #bottomActions .view-toggle-btn,
+    #bottomActions .share-btn,
+    .top-toggle .settings-btn,
     .top-toggle .view-toggle-btn,
+    .top-toggle .share-btn,
+    .settings-nav .settings-btn,
     .settings-nav .view-toggle-btn,
-    .qr-nav .view-toggle-btn {
-      min-width: 0;
-      flex: 1 1 auto;
+    .settings-nav .share-btn,
+    .qr-nav .settings-btn,
+    .qr-nav .view-toggle-btn,
+    .qr-nav .share-btn {
+      width: 46px;
+      min-width: 46px;
+      height: 46px;
+      margin: 0;
+      padding: 0;
+      flex: 0 0 46px;
     }
   }
-
-/* Handy: Buttons kompakt als zentrierte Gruppe */
-@media (max-width: 700px) {
-  #bottomActions {
-    width: fit-content;
-    max-width: 100%;
-    margin: 2em auto 0;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  #bottomActions .view-toggle-wrap {
-    flex: 0 0 160px;
-    width: 160px;
-    margin: 0;
-  }
-
-  #bottomActions .view-toggle-btn {
-    width: 160px;
-    min-width: 160px;
-    margin: 0;
-    flex: none;
-  }
-
-  #bottomActions .settings-btn,
-  #bottomActions .share-btn {
-    width: 46px;
-    min-width: 46px;
-    height: 46px;
-    margin: 0;
-    flex: none;
-  }
-}
 </style>
+
+
+  
 </head>
 
 <body>
