@@ -493,34 +493,38 @@
     }
   }
 
-  /* Handy: Buttons unten kompakt und zentriert */
-  @media (max-width: 700px) {
-    #bottomActions {
-      justify-content: center;
-      gap: 8px;
-    }
-
-    #bottomActions .view-toggle-wrap {
-      flex: 0 0 auto;
-      margin: 0;
-    }
-
-    #bottomActions .view-toggle-btn {
-      width: 180px;
-      min-width: 0;
-      margin: 0;
-      flex: 0 0 180px;
-    }
-
-    #bottomActions .settings-btn,
-    #bottomActions .share-btn {
-      width: 46px;
-      min-width: 46px;
-      height: 46px;
-      margin: 0;
-      flex: 0 0 46px;
-    }
+/* Handy: Buttons kompakt als zentrierte Gruppe */
+@media (max-width: 700px) {
+  #bottomActions {
+    width: fit-content;
+    max-width: 100%;
+    margin: 2em auto 0;
+    justify-content: center;
+    gap: 8px;
   }
+
+  #bottomActions .view-toggle-wrap {
+    flex: 0 0 160px;
+    width: 160px;
+    margin: 0;
+  }
+
+  #bottomActions .view-toggle-btn {
+    width: 160px;
+    min-width: 160px;
+    margin: 0;
+    flex: none;
+  }
+
+  #bottomActions .settings-btn,
+  #bottomActions .share-btn {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    margin: 0;
+    flex: none;
+  }
+}
 </style>
 </head>
 
