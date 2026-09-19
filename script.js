@@ -916,12 +916,6 @@ function toggleView() {
     );
 
 
-  const toggleButton =
-    document.getElementById(
-      "viewToggleButton"
-    );
-
-
   const tableIsVisible =
     tableView.style.display ===
       "block";
