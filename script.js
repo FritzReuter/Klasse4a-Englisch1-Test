@@ -902,45 +902,49 @@ function toggleView() {
 
   document.getElementById("settingsView").style.display = "none";
   document.getElementById("qrView").style.display = "none";
-  document.getElementById("bottomActions").style.display = "flex";
 
   const formView =
     document.getElementById(
       "formView"
     );
 
-
   const tableView =
     document.getElementById(
       "tableView"
     );
 
+  const bottomActions =
+    document.getElementById(
+      "bottomActions"
+    );
 
   const tableIsVisible =
     tableView.style.display ===
       "block";
-
 
   if (tableIsVisible) {
 
     tableView.style.display =
       "none";
 
-
     formView.style.display =
       "block";
+
+    bottomActions.style.display =
+      "flex";
 
   } else {
 
     buildOverviewTable();
 
-
     formView.style.display =
       "none";
 
-
     tableView.style.display =
       "block";
+
+    bottomActions.style.display =
+      "none";
 
   }
 
