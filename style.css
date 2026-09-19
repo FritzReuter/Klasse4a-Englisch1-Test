@@ -315,11 +315,14 @@
 
 /* ===== DARK MODE =============================================================================================================== */
 
+html:has(body.dark-mode) {
+    background: #323232;
+}
+
 body.dark-mode {
     background: #323232;
     color: #e8e8e8;
 }
-
 body.dark-mode .container,
 body.dark-mode .settings-card {
     background: #17191a;
