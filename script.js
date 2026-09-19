@@ -69,7 +69,7 @@ function getCurrentArray() {
   }
 
 
-  return currentTopics[topic];
+  return currentTopics[topic] || [];
 
 }
 
