@@ -269,20 +269,7 @@
   align-items: center;
 }
 
-    @media (min-width: 701px) {
-      #qrCode {
-        order: 1;
-      }
 
-      .qr-form-button {
-        order: 2;
-        margin-top: 1.5em;
-      }
-
-      .qr-url {
-        order: 3;
-      }
-    }
 
     #qrCode {
       display: inline-block;
