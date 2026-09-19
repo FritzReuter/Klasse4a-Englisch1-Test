@@ -260,26 +260,14 @@
       fill: currentColor;
     }
 
-    .qr-view {
-      display: none;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .qr-form-button {
-      order: 1;
-    }
-
-    #qrCode {
-      order: 2;
-    }
-
-    .qr-url {
-      order: 3;
-    }
+.qr-view {
+  display: none;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
 
     @media (min-width: 701px) {
       #qrCode {
