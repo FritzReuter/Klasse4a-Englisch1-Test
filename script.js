@@ -51,13 +51,8 @@ function getCurrentTopics() {
 
 function getCurrentArray() {
 
-  const topic =
-    document.getElementById(
-      "topicSelect"
-    ).value;
-
-  const currentTopics =
-    getCurrentTopics();
+  const topic = document.getElementById("topicSelect").value;
+  const currentTopics = getCurrentTopics();
 
 
   if (topic === "all") {
@@ -300,10 +295,7 @@ function addRandomAllEntry() {
 
 function showCurrentWord() {
 
-  const topic =
-    document.getElementById(
-      "topicSelect"
-    ).value;
+  const topic = document.getElementById("topicSelect").value;
 
 
   /*
@@ -510,11 +502,7 @@ function resetUI() {
 
 function nextWord() {
 
-  const topic =
-    document.getElementById(
-      "topicSelect"
-    ).value;
-
+  const topic = document.getElementById("topicSelect").value;
 
   /*
    * ALL
@@ -597,11 +585,7 @@ function nextWord() {
 
 function prevWord() {
 
-  const topic =
-    document.getElementById(
-      "topicSelect"
-    ).value;
-
+  const topic = document.getElementById("topicSelect").value;
 
   /*
    * ALL
@@ -673,11 +657,7 @@ function prevWord() {
 
 function checkTranslation() {
 
-  const topic =
-    document.getElementById(
-      "topicSelect"
-    ).value;
-
+  const topic = document.getElementById("topicSelect").value;
 
   /*
    * ALL
@@ -762,26 +742,18 @@ function buildOverviewTable() {
     );
 
 
-  const topicSelect =
-    document.getElementById(
-      "topicSelect"
-    );
-
-
+  const topicSelect = document.getElementById("topicSelect");
+  
   table.innerHTML = "";
 
 
-  Array.from(
-    topicSelect.options
-  ).forEach(option => {
+  Array.from(topicSelect.options).forEach(option => {
 
     const topicKey = option.value;
 
 
     if (topicKey === "all") {
-
       return;
-
     }
 
 
@@ -800,9 +772,7 @@ function buildOverviewTable() {
 
 
     if (entries.length === 0) {
-
       return;
-
     }
 
 
@@ -823,47 +793,28 @@ function buildOverviewTable() {
     `;
 
 
-    table.appendChild(
-      topicRow
-    );
+    table.appendChild(topicRow);
 
 
     entries.forEach(entry => {
 
-      const row =
-        document.createElement(
-          "tr"
-        );
+      const row = document.createElement("tr");
+
+      const emptyCell = document.createElement("td");
 
 
-      const emptyCell =
-        document.createElement(
-          "td"
-        );
+      emptyCell.className = "empty-topic-cell";
+
+      const englishCell = document.createElement("td");
 
 
-      emptyCell.className =
-        "empty-topic-cell";
+      englishCell.textContent = entry.en;
 
 
-      const englishCell =
-        document.createElement(
-          "td"
-        );
+      const germanCell = document.createElement("td");
 
 
-      englishCell.textContent =
-        entry.en;
-
-
-      const germanCell =
-        document.createElement(
-          "td"
-        );
-
-
-      germanCell.textContent =
-        entry.de;
+      germanCell.textContent = entry.de;
 
 
       row.appendChild(
