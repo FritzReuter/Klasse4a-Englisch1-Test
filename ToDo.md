@@ -15,19 +15,7 @@ const topic = document.getElementById("topicSelect").value;
 
 Das zieht sich durch fast die gesamte Datei. Funktional kein Problem, aber der größte Clean-Code-Punkt.
 
-2. **`script.js`: `getCurrentArray()` sollte defensiver sein.** Aktuell:
-
-```js
-return currentTopics[topic];
-```
-
-Robuster:
-
-```js
-return currentTopics[topic] || [];
-```
-
-Dann führt ein versehentlich nicht vorhandener Topic-Key nicht später bei `.length` zu einem Fehler.
+2.  Erledigt
 
 3. **`index.html`: Kommentar-Tippfehler.**
 
